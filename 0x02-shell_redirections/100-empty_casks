@@ -1,3 +1,2 @@
 #!/bin/bash
-find *. -type f -empty
-find *. -type d -empty
+find . -empty -printf '%f\n'
