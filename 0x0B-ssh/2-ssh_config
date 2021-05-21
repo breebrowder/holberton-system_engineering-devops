@@ -1,0 +1,7 @@
+#  Share your SSH client configuration
+
+host 2372-web-01
+     HostName 107.23.155.124
+     User ubuntu
+     PasswordAuthentication No
+     IdentifyFile ~/.ssh.holberton
