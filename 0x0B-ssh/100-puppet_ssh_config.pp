@@ -1,6 +1,6 @@
-# Changes configuration file to turn off password authent. and use private key
+# Puppet is an open source configuration management tool. Adv task - using puppet to alter config file
 
 file { '/etc/ssh/ssh_config':
-  content => 'PasswordAuthentication no
-  IdentityFile ~/.ssh/holberton',
+     content => 'PasswordAuthentication No
+     IdentityFile ~/.ssh.holberton',
 }
