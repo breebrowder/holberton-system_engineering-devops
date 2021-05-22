@@ -3,6 +3,6 @@
 # Puppet is an open source configuration management tool. The Puppet software pulls its configuration from code written in a Ruby DSL
 
 file { '/etc/ssh/ssh_config':
-     content => 'PasswordAuthentication No
+     content => 'PasswordAuthentication no
      IdentifyFile ~/.ssh.holberton',
 }
