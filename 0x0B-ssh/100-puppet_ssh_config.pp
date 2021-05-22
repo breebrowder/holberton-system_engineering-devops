@@ -1,6 +1,6 @@
-# Puppet is an open source config management tool, use to alter config file
+# Use puppet tool to alter config file, no password auth
 
 file { '/etc/ssh/ssh_config':
-     content => 'PasswordAuthentication No
-     IdentityFile ~/.ssh.holberton',
+  content => 'PasswordAuthentication No
+  IdentityFile ~/.ssh/holberton',
 }
