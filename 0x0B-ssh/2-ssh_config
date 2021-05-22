@@ -4,4 +4,4 @@ host 2372-web-01
      HostName 3.91.201.202
      User ubuntu
      PasswordAuthentication No
-     IdentifyFile ~/.ssh.holberton
+     IdentityFile ~/.ssh.holberton
