@@ -1,8 +1,6 @@
-# ADVANCED TASK IN 0x0B- SSH
-# CLIENT CONFIGURATION WITH PUPPET
-# Puppet is an open source configuration management tool. The Puppet software pulls its configuration from code written in a Ruby DSL
+# Changes configuration file to turn off password authent. and use private key
 
 file { '/etc/ssh/ssh_config':
-     content => 'PasswordAuthentication No
-     IdentityFile ~/.ssh.holberton',
+  content => 'PasswordAuthentication no
+  IdentityFile ~/.ssh/holberton',
 }
