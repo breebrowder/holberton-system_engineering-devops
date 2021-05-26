@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Printing a phrase 10 times using an until loop
+x=1; until [ $x -gt 10 ]; do echo "Holberton School"; ((x++)); done
