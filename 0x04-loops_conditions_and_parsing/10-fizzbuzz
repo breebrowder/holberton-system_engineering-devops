@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Display 1 - 100. Handle multiples of 3 and 5
+
+x=0
+while [ $((x++)) -le 99 ]; do
+      if ! ((x%15)); then echo "FizzBuzz";
+      elif ! ((x%3)); then echo "Fizz";
+      elif ! ((x%5)); then echo "Buzz"; else echo "$x"; fi; done
