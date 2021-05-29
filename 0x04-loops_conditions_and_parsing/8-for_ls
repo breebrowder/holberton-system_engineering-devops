@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Display content in cd in ls format without leading numbers
+
+for x in * ; do echo "$x" | cut -d "-" -f 2; done
