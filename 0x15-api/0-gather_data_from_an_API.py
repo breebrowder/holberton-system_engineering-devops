@@ -3,7 +3,8 @@
 import requests
 import sys
 
-def get_employee_tasks(employeeId):
+
+def get_employee_tasks(empId):
     """ Gets employee tasks """
 
     # Variables
@@ -12,8 +13,11 @@ def get_employee_tasks(employeeId):
     completed = 0
 
     # Perform GET requests
-    userRes = requests.get('https://jsonplaceholder.typicode.com/users/{}'.format(employeeId))
-    todosRes = requests.get('https://jsonplaceholder.typicode.com/users/{}/todos'.format(employeeId))
+    userRes = requests.get(
+        'https://jsonplaceholder.typicode.com/users/{}'.format(empId))
+    todosRes = requests.get(
+        'https://jsonplaceholder.typicode.com/users/{}/todos'.
+        format(empId))
 
     print("userRes: {} \n".format(userRes))
     print("todosRes: {} \n".format(todosRes))
@@ -30,7 +34,8 @@ def get_employee_tasks(employeeId):
             completed += 1
             task_list.append(task.get('title'))
 
-    print("Employee {} is done with tasks({}/{}):".format(name, completed, len(todosJson)))
+    print("Employee {} is done with tasks({}/{}):"
+          .format(name, completed, len(todosJson)))
     for title in task_list:
         print("\t {}".format(title))
 
