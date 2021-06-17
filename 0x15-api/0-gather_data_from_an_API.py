@@ -1,46 +1,45 @@
 #!/usr/bin/python3
-""" Gathering data from an API """
+""" Gather data from an API """
 
 import requests
 import sys
 
 
-def get_employee_tasks(empId):
-    """ Gets employee tasks """
+def get_employee_tasks(employeeId):
+    """ Get employee tasks """
 
     # Variables
     name = ''
     task_list = []
-    completed = 0
+    completed_counter = 0
 
-    # Perform GET requests
-    userRes = requests.get(
-        'https://jsonplaceholder.typicode.com/users/{}'.format(empId))
+    # Do GET requests
+    usersRes = requests.get(
+        "https://jsonplaceholder.typicode.com/users/{}".format(employeeId))
     todosRes = requests.get(
-        'https://jsonplaceholder.typicode.com/users/{}/todos'.
-        format(empId))
+        "https://jsonplaceholder.typicode.com/users/{}/todos".
+        format(employeeId))
 
-    print("userRes: {} \n".format(userRes))
-    print("todosRes: {} \n".format(todosRes))
-    # get JSON from responses
-    name = userRes.json().get('name')
-#    print("Name: {}".format(name))
-
+    # Get the json from responses
+    name = usersRes.json().get('name')
     todosJson = todosRes.json()
-    # Save employee name
+    # Save the employee Name
 
-    # Loop tasks
+    # Loop the tasks
     for task in todosJson:
         if task.get('completed') is True:
-            completed += 1
+            completed_counter += 1
+            # save the task title to task_list
             task_list.append(task.get('title'))
 
-    print("Employee {} is done with tasks({}/{}):"
-          .format(name, completed, len(todosJson)))
+    # Print the first line
+    print('Employee {} is done with tasks({}/{}):'.format(
+        name, completed_counter, len(todosJson)))
+    # Loop the task_list and print tasks
     for title in task_list:
-        print("\t {}".format(title))
+        print('\t {}'.format(title))
 
     return 0
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     get_employee_tasks(sys.argv[1])
