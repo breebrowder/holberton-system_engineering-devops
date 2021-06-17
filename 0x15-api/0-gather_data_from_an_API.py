@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ Gathering data from an API """
-import csv
+
 import requests
 import sys
 
@@ -24,7 +24,7 @@ def get_employee_tasks(empId):
     print("todosRes: {} \n".format(todosRes))
     # get JSON from responses
     name = userRes.json().get('name')
-    print("Name: {}".format(name))
+#    print("Name: {}".format(name))
 
     todosJson = todosRes.json()
     # Save employee name
