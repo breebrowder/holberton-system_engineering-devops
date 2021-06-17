@@ -27,7 +27,6 @@ def save_tasks_to_json(employeeId):
 
     userDict[employeeId] = []
 
-
     # Loop through and save
     for task in todosJson:
         taskDict = {}
