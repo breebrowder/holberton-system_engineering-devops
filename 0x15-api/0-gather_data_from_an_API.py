@@ -4,6 +4,8 @@ import requests
 import sys
 
 def get_employee_tasks(employeeId):
+    """ Gets employee tasks """
+
     # Variables
     name = ''
     task_list = []
