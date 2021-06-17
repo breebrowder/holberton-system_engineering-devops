@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Display lines containing the BASH word
+ps axu -H | grep "bash"
