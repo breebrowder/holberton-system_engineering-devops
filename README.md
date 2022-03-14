@@ -5,7 +5,7 @@
 1. [Shell, basics](https://intranet.hbtn.io/projects/205)
 2. [Shell, permissions](https://intranet.hbtn.io/projects/207)
 3. [Shell, I/O Redirections and filters](https://intranet.hbtn.io/projects/208)
-4. [Regular expressions](https://intranet.hbtn.io/projects/?)
+4. [Regular expressions](https://intranet.hbtn.io/projects/1708)
 5. [Shell, init files, variables and expanisions](https://intranet.hbtn.io/projects/209)
 6. [Loops, condiitions and parsing](https://intranet.hbtn.io/projects/251)
 7. [Processes and signals](https://intranet.hbtn.io/projects/255)
